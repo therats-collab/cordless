@@ -1,6 +1,7 @@
 package discordutil
 
 import (
+	"strings"
 	"math/rand"
 	"sort"
 
@@ -12,7 +13,7 @@ import (
 )
 
 var (
-	botPrefix = tview.Escape("[BOT]")
+	botPrefix = tview.Escape("") // Defaults to "[BOT]", clear with ""
 
 	//global state that persist during a session.
 	userColorCache = make(map[string]string)
@@ -77,8 +78,13 @@ func getUserName(name string, bot bool) string {
 	discordName := tviewutil.Escape(name)
 
 	if bot {
-		return botPrefix + discordName
-	}
+		return botPrefix + strings.ReplaceAll(discordName, " @ ", "@") // Totally specific to us and not you. Default is just
+	}																   // return botPrefix + discordname
+																	   //
+																	   // If you're wondering, the Pluralkit bot force-adds a space
+																	   // between name and system tag, and I don't want it to.
+																	   // So it converts from "nathan @ rats" to "nathan@rats" clientside
+
 
 	return discordName
 }
