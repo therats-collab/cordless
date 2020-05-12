@@ -14,26 +14,26 @@ import (
 func main() {
 	theme := &config.Theme{
 		Theme: &tview.Theme{
-			PrimitiveBackgroundColor:    tcell.NewRGBColor(70, 70, 70),
-			ContrastBackgroundColor:     tcell.NewRGBColor(104, 142, 196),
-			MoreContrastBackgroundColor: tcell.NewRGBColor(79, 79, 79),
-			BorderColor:                 tcell.NewRGBColor(213, 220, 229),
-			BorderFocusColor:            tcell.NewRGBColor(104, 142, 196),
-			TitleColor:                  tcell.ColorWhite,
-			GraphicsColor:               tcell.ColorWhite,
-			PrimaryTextColor:            tcell.ColorWhite,
-			SecondaryTextColor:          tcell.ColorWhite,
-			TertiaryTextColor:           tcell.ColorWhite,
-			InverseTextColor:            tcell.NewRGBColor(104, 142, 196),
-			ContrastSecondaryTextColor:  tcell.NewRGBColor(104, 142, 196),
+			PrimitiveBackgroundColor:    tcell.NewRGBColor(22, 0, 40),       // Dark purple
+			ContrastBackgroundColor:     tcell.NewRGBColor(226, 49, 82),     // Amaranth
+			MoreContrastBackgroundColor: tcell.ColorWhite,                   // White
+			BorderColor:                 tcell.NewRGBColor(240, 159, 127),   // Light salmon
+			BorderFocusColor:            tcell.NewRGBColor(226, 49, 82),	 // Amaranth
+			TitleColor:                  tcell.ColorWhite,					 // White
+			GraphicsColor:               tcell.NewRGBColor(76,42,69),		 // Dark byzantium
+			PrimaryTextColor:            tcell.NewRGBColor(240, 159, 127),   // Light salmon
+			SecondaryTextColor:          tcell.ColorYellow, 				 // Yellow
+			TertiaryTextColor:           tcell.NewRGBColor(136,89,142),      // Antique fuchsia
+			InverseTextColor:            tcell.NewRGBColor(136,89,142),      // Antique fuchsia
+			ContrastSecondaryTextColor:  tcell.ColorDarkCyan, 				 // Dark cyan
 		},
-		BlockedUserColor: tcell.ColorGray,
-		InfoMessageColor: tcell.ColorGray,
-		BotColor:         tcell.NewRGBColor(0x94, 0x96, 0xfc),
-		MessageTimeColor: tcell.ColorGray,
-		LinkColor:        tcell.ColorDarkCyan,
-		DefaultUserColor: tcell.NewRGBColor(0x44, 0xe5, 0x44),
-		AttentionColor:   tcell.ColorOrange,
+		BlockedUserColor: tcell.NewRGBColor(145, 30, 51),
+		InfoMessageColor: tcell.NewRGBColor(145, 30, 51),
+		BotColor:         tcell.NewRGBColor(226, 49, 82),
+		MessageTimeColor: tcell.NewRGBColor(145, 30, 51),
+		LinkColor:        tcell.NewRGBColor(226, 49, 82),
+		DefaultUserColor: tcell.NewRGBColor(226, 49, 82),
+		AttentionColor:   tcell.NewRGBColor(226, 49, 82),
 		ErrorColor:       tcell.ColorRed,
 		RandomUserColors: []tcell.Color{
 			tcell.NewRGBColor(0xd8, 0x50, 0x4e),
